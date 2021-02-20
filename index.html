@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podomoro Timer</title>
+    <script src="index.js" defer></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="p-7 bg-gray-200">
+      <h1 class="text-4xl text-gray-800 font-semibold">Tomato Timer</h1>
+    </header>
+
+    <main
+      class="w-full h-full flex flex-col items-center p-4 text-white font-semibold"
+    >
+      <!-- TIME CONTROL BUTTONS -->
+      <div class="flex">
+        <button
+          class="px-20 py-2 bg-blue-400 border border-r-0 border-black focus:outline-none hover:bg-blue-700 transition duration-100 bg-blue-700"
+          data-key="25"
+        >
+          Podomoro
+        </button>
+        <button
+          class="px-20 py-2 bg-blue-400 border border-r-0 border-black focus:outline-none hover:bg-blue-700 transition duration-100"
+          data-key="5"
+        >
+          Short Break
+        </button>
+        <button
+          class="px-20 py-2 bg-blue-400 border border-black focus:outline-none hover:bg-blue-700 transition duration-100"
+          data-key="10"
+        >
+          Long Break
+        </button>
+      </div>
+
+      <!-- THE TIMER -->
+      <h1 class="text-black text-8xl font-bold m-10" id="the-time">25:00</h1>
+
+      <!-- START STOP RESET BUTTONS -->
+      <div class="text-gray-100">
+        <button
+          class="px-8 py-2 font-semibold rounded shadow m-3 bg-yellow-400 hover:bg-opacity-70 transition duration-200"
+          data-id="start"
+        >
+          Start
+        </button>
+        <button
+          class="px-8 py-2 font-semibold rounded shadow m-3 bg-red-600 hover:bg-opacity-70 transition duration-200"
+          data-id="stop"
+        >
+          Stop
+        </button>
+        <button
+          class="px-8 py-2 font-semibold rounded shadow m-3 bg-gray-200 text-black hover:bg-opacity-70 transition duration-200"
+          data-id="reset"
+        >
+          Reset
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
